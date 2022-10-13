@@ -1,0 +1,478 @@
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Lobster', cursive;
+    background: rgba(245, 240, 247, 0.725) url(/image/background55.png);
+  }
+  .wrapper {
+    position: relative;
+    width: 900px;
+    height: 80%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid rgba(212, 131, 250, 0.3);
+    background: rgba(255, 255, 255, 0.725);
+    -webkit-box-shadow: 0px 1px 9px 6px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 1px 9px 6px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 1px 9px 6px rgba(34, 60, 80, 0.2);
+  }
+  .craig {
+    position: absolute;
+    width: 55px;
+    bottom: 0;
+    right: 0;
+    animation-delay: 3s;
+    animation: craigLeft 16s infinite 8s;
+  }
+  @keyframes craigLeft {
+    from {
+      right: 0;
+    }
+    30% {
+      right: 780px;
+      transform: rotateY(0deg);
+    }
+    32% {
+      transform: rotateY(180deg);
+    }
+    58% {
+      transform: rotateY(180deg);
+    }
+    60% {
+      right: 0;
+      transform: rotateY(0deg);
+    }
+    to {
+      right: 0;
+    }
+  }
+  .tweek {
+    position: absolute;
+    width: 70px;
+    bottom: 0;
+    left: 0;
+    animation: tweekBeets 16s infinite 8s;
+  }
+  @keyframes tweekBeets {
+    from {
+      bottom: 0;
+    }
+    27% {
+      bottom: 0;
+    }
+    30% {
+      bottom: 20px;
+    }
+    33% {
+      bottom: 0;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  h2 {
+    font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  text-shadow: 
+               -1.5px -1.5px 0 rgb(198, 119, 237),
+               -1px -1px 0 rgb(200, 129, 242),
+               -0.5px -0.5px 0 rgb(209, 143, 247),
+               0 0 0 rgb(218, 159, 252);
+  color: transparent;
+  transition: all 1s;
+  }
+  h2:hover {
+    text-shadow: 
+             -1.5px 1.5px 0 rgb(227, 128, 255),
+             -1px 1px 0 rgb(216, 153, 255),
+             -0.5px 0.5px 0 rgb(237, 179, 255),
+             0 0 0 rgb(239, 181, 241);
+  color: transparent;
+  }
+  textarea {
+    text-align: center;
+    font-family: cursive;
+    font-size: 24px;
+    border: 1px solid rgb(231, 170, 255);
+    border-radius: 4px;
+    padding: 2rem 1rem;
+    min-height: 3em;
+    width: 80%;
+    resize: vertical;
+
+  }
+  button {
+    margin: 20px;
+  }
+  .hb {
+    position: absolute;
+    top: 40px;
+    font-size: 34px;
+    color: #c797eb;
+    opacity: 1;
+    transition: all .3s linear;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-8 {
+    background-color: #f0ecfc;
+  background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-8 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-8:before,
+  .btn-8:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+  }
+  .btn-8:before{
+     height: 0%;
+     width: 2px;
+  }
+  .btn-8:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-8:hover:before {
+    height: 100%;
+  }
+  .btn-8:hover:after {
+    width: 100%;
+  }
+  .btn-8:hover{
+    background: transparent;
+  }
+  .btn-8 span:hover{
+    color: #c797eb;
+  }
+  .btn-8 span:before,
+  .btn-8 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+  }
+  .btn-8 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-8 span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .btn-8 span:hover:before {
+    height: 100%;
+  }
+  .btn-8 span:hover:after {
+    width: 100%;
+  }
+  .open-window {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(146, 75, 252, 0.4);
+    transition: all .6s ease-in-out;
+  }
+  .window-close {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 250px;
+    background-color: #c797eb;
+    border: 2px solid #e3c2fd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: all .6s ease-in-out;
+  }
+  .window {
+    display: block;
+    animation-duration: .6s;
+    animation-name: slidein;
+    top: 50%;
+    transition: all .6s ease-in-out;
+  }
+  @keyframes slidein {
+    from {
+      top: 10%
+    }
+  
+    to {
+      top: 50%
+    }
+  }
+  .falling-hearts {
+    z-index: 100;
+    position: absolute;
+    top: -130px;
+    animation: falling 3s;
+  }
+  @keyframes falling {
+    from {
+      top: -130px;
+    }
+    80% {
+      top: 80vh;
+    }
+    90% {
+      top: 70vh;
+    }
+    to {
+      top: 100vh;
+      display: none;
+    }
+  }
+  .hisoka {
+    display: none;
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    transform: rotate(270deg);
+    animation: hisokaGo 25s infinite 3s;
+  }
+
+  @keyframes hisokaGo {
+    from{
+      top: 0;
+    }
+    23% {
+      top: 87%;
+      right: 0;
+      transform: rotate(270deg);
+    }
+    25% {
+      transform: rotate(360deg);
+    }
+    47% {
+      top: 87%;
+      right: 94%;
+      transform: rotate(360deg);
+    }
+    50% {
+      transform: rotate(450deg);
+    }
+    72% {
+      top: 0;
+      right: 94%;
+      transform: rotate(450deg);
+    }
+    75% {
+      transform: rotate(540deg);
+    }
+    97% {
+      transform: rotate(540deg);
+    }
+    to {
+      top: 0;
+      right: 0;
+      transform: rotate(270deg);
+    }
+  }
+  .cake {
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    background: #f2bbc5;
+    border-radius: 100%;
+    opacity: 1;
+    transition: opacity .7s;
+    box-shadow: 
+      0px 4px 0px #f2bbc5, 
+      0px 8px 0px #f2bbc5, 
+      
+      0px 12px 0px #7b5d4b, 
+      0px 16px 0px #7b5d4b, 
+      0px 20px 0px #7b5d4b, 
+      0px 24px 0px #7b5d4b, 
+      0px 28px 0px #7b5d4b,
+      0px 32px 0px #7b5d4b,
+      
+      0px 36px 0px #fff1c7,
+      0px 40px 0px #fff1c7, 
+      0px 44px 0px #fff1c7, 
+      0px 48px 0px #fff1c7, 
+      
+      0px 52px 0px #f2bbc5, 
+      0px 56px 0px #f2bbc5, 
+      
+      0px 60px 0px #7b5d4b, 
+      0px 64px 0px #7b5d4b, 
+      0px 68px 0px #7b5d4b, 
+      0px 72px 0px #7b5d4b, 
+      0px 76px 0px #7b5d4b, 
+      0px 80px 0px #7b5d4b;
+  }
+  
+  .plate {
+    position: absolute;
+    height: 90px;
+    width: 300px;
+    bottom:-95px;
+    left: 50%;
+    margin-left: -150px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0px 6px 0px #898989;
+    z-index: -1;
+  }
+  
+  .candle {
+    position: relative;
+    height: 50px;
+    width: 12px;
+    top: -20px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index:10;
+  }
+  
+  #flame {
+     position: absolute;
+     z-index: 10; 
+  }
+  
+  
+  .out {
+    background-color: #795548;
+    width: 2px;
+    height: 10px;
+    top: -8px;
+    left: 50%;
+    margin-left: -1px;
+  }
+  
+  .lit {
+    background-color: #ffc950;
+    width: 15px;
+    height: 35px;
+    filter: blur(1px);
+    
+  /*  Info on border radius. http://www.css3.info/preview/rounded-border/ */
+      
+    border-top-left-radius: 10px 35px;    
+    border-top-right-radius:  10px 35px;
+    border-bottom-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    top: -34px;
+    margin: auto;
+    
+  /*   http://www.css3.info/preview/box-shadow/ */
+    box-shadow: 
+      0 0 17px 7px rgba(244, 231, 112, 0.71); 
+    transform-origin: bottom;
+    animation: flicker 3s ease-in-out alternate infinite;
+  }
+  
+  @keyframes flicker {
+    0% {
+      transform: skewX(5deg);
+      box-shadow: 
+      0 0 17px 10px rgba(244, 231, 112, 0.71);
+    }
+    
+    25% {
+      transform: skewX(-5deg);
+      box-shadow: 
+      0 0 17px 5px rgba(244, 231, 112, 0.71);
+    }
+    
+    50% {
+      transform: skewX(10deg);
+      box-shadow: 
+      0 0 17px 7px rgba(244, 231, 112, 0.71);
+    }
+    
+    75% {
+      transform: skewX(-10deg);
+      box-shadow: 
+      0 0 17px 5px rgba(244, 231, 112, 0.71);
+    }
+    
+    100% {
+      transform: skewX(5deg);
+      box-shadow: 
+      0 0 17px 10px rgba(244, 231, 112, 0.71);
+    }
+  }
+  .candle-out {
+    animation: candleOut 2s;
+  }
+  @keyframes candleOut {
+    from {
+      top: -20px;
+    }
+    to {
+      top: -1120px;
+    }
+  }
+  .first-page {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .next {
+    max-height: 100%;
+    opacity: 1;
+    padding: 10px 30px;
+    border-radius: 17px;
+    margin-top: 140px;
+    border: none;
+    background: rgba(151, 150, 152, 0.725);
+    color: #fffefe;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(34, 60, 80, 0.2);
+    transition: all .3s;
+  }
+  .next:hover {
+    background: rgba(115, 114, 115, 0.725);
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 1px 10px 0px rgba(34, 60, 80, 0.2);
+  }
